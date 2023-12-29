@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B153637A2B3D8BC0007FF86F /* ShowMovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15363792B3D8BC0007FF86F /* ShowMovieDetail.swift */; };
+		B153637C2B3DA3E1007FF86F /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B153637B2B3DA3E1007FF86F /* CustomNavigationBar.swift */; };
+		B153637E2B3DB5E2007FF86F /* NavigationViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B153637D2B3DB5E2007FF86F /* NavigationViewContainer.swift */; };
+		B15363802B3DBBEA007FF86F /* AddCustomNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B153637F2B3DBBEA007FF86F /* AddCustomNavView.swift */; };
+		B15363822B3DBDA6007FF86F /* DetailImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15363812B3DBDA6007FF86F /* DetailImageView.swift */; };
 		B15DA7202B3C36B400F43541 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15DA71F2B3C36B400F43541 /* Constants.swift */; };
 		B15DA7222B3C78E300F43541 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15DA7212B3C78E300F43541 /* MovieListView.swift */; };
 		B15DA7242B3C7ADB00F43541 /* StringConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15DA7232B3C7ADB00F43541 /* StringConstant.swift */; };
@@ -40,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B15363792B3D8BC0007FF86F /* ShowMovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMovieDetail.swift; sourceTree = "<group>"; };
+		B153637B2B3DA3E1007FF86F /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		B153637D2B3DB5E2007FF86F /* NavigationViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewContainer.swift; sourceTree = "<group>"; };
+		B153637F2B3DBBEA007FF86F /* AddCustomNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomNavView.swift; sourceTree = "<group>"; };
+		B15363812B3DBDA6007FF86F /* DetailImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageView.swift; sourceTree = "<group>"; };
 		B15DA71F2B3C36B400F43541 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B15DA7212B3C78E300F43541 /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 		B15DA7232B3C7ADB00F43541 /* StringConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstant.swift; sourceTree = "<group>"; };
@@ -118,6 +128,11 @@
 				B15DA71F2B3C36B400F43541 /* Constants.swift */,
 				B15DA7212B3C78E300F43541 /* MovieListView.swift */,
 				B15DA7232B3C7ADB00F43541 /* StringConstant.swift */,
+				B15363792B3D8BC0007FF86F /* ShowMovieDetail.swift */,
+				B153637B2B3DA3E1007FF86F /* CustomNavigationBar.swift */,
+				B153637D2B3DB5E2007FF86F /* NavigationViewContainer.swift */,
+				B153637F2B3DBBEA007FF86F /* AddCustomNavView.swift */,
+				B15363812B3DBDA6007FF86F /* DetailImageView.swift */,
 			);
 			path = ProductList;
 			sourceTree = "<group>";
@@ -277,9 +292,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B153637E2B3DB5E2007FF86F /* NavigationViewContainer.swift in Sources */,
 				B18221D52B3B2C7800166DF4 /* MovieView.swift in Sources */,
+				B15363822B3DBDA6007FF86F /* DetailImageView.swift in Sources */,
+				B153637A2B3D8BC0007FF86F /* ShowMovieDetail.swift in Sources */,
 				B15DA7222B3C78E300F43541 /* MovieListView.swift in Sources */,
 				B18221FE2B3B323300166DF4 /* ApiManager.swift in Sources */,
+				B15363802B3DBBEA007FF86F /* AddCustomNavView.swift in Sources */,
+				B153637C2B3DA3E1007FF86F /* CustomNavigationBar.swift in Sources */,
 				B18221D32B3B2C7800166DF4 /* ProductListApp.swift in Sources */,
 				B18222002B3B324F00166DF4 /* productModel.swift in Sources */,
 				B18222022B3B364F00166DF4 /* ProductViewModel.swift in Sources */,

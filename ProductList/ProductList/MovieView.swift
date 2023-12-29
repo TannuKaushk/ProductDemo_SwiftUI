@@ -12,16 +12,23 @@ struct MovieView: View {
     @State var titleText: String = "The Hunger Games: The Ballad of Sonbirds & Snakes"
     @State var yearText: String = "2023"
     @State var ratingText: String = "7.2"
+ 
     var body: some View {
         NavigationView {
             List {
                 ForEach(Array(viewModel.productArray.enumerated()), id: \.element.id) { index, item in
+                    NavigationLink(destination: {
+                        ShowMovieDetail(movie: viewModel.productArray, index: index)
+                    })
+                                    {
                     MovieListView(movie: item)
+                    }
+                   
                 }
                 .selectionDisabled()
                 .listRowSeparator(.hidden)
                 
-            }
+            }.scrollIndicators(.hidden, axes: .vertical)
             .listStyle(.plain)
             .background(Color.white)
             .navigationTitle("Trending Movies")

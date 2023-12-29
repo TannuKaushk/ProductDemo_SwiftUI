@@ -18,9 +18,7 @@ struct MovieListView: View {
     }
     var body: some View {
             HStack {
-                Image("Pic")
-                    .resizable()
-                if let url = URL(string: movie.posterPath ?? "") {
+                if let url = URL(string: Constants.imageBaseURL + "/" + (movie.posterPath ?? "")) {
                     movieImage(url: url)
                 }
                     
