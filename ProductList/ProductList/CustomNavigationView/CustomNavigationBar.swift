@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
-
+/** Custom NavigationView
+*/
 struct CustomNavigationBar: View {
+    @Environment(\.presentationMode) var presentationMode
+     var showBackButton: Bool
     var body: some View {
         HStack(spacing: nil) {
             backButton
@@ -25,7 +28,7 @@ struct CustomNavigationBar: View {
 
 #Preview {
     VStack {
-        CustomNavigationBar()
+        CustomNavigationBar(showBackButton: true)
         Spacer()
     }
 }
@@ -33,15 +36,14 @@ struct CustomNavigationBar: View {
 extension CustomNavigationBar {
     private var backButton : some View {
         Button {
-            
+            presentationMode.wrappedValue.dismiss()
         } label: {
             HStack {
-                Image(systemName: "arrow.left")
-                    .resizable()
-                    .frame(width: 20, height: 20)
-                Text("Back")
-                    .font(.headline)
-                    .fontWeight(.bold)
+                if !showBackButton {
+                    Image(systemName: "arrow.left")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                }
                     
             }
         }

@@ -9,12 +9,14 @@ import SwiftUI
 
 struct NavigationViewContainer<Content: View>: View {
     let content: Content
-    init(@ViewBuilder content: () -> Content) {
+    let showBackButton: Bool
+    init(@ViewBuilder content: () -> Content, showBackButton: Bool) {
         self.content = content()
+        self.showBackButton = showBackButton 
     }
     var body: some View {
         VStack(spacing: 0) {
-          CustomNavigationBar()
+            CustomNavigationBar(showBackButton: showBackButton)
             content.frame(maxWidth: .infinity, maxHeight: .infinity)
            // Spacer()
         }
@@ -22,9 +24,9 @@ struct NavigationViewContainer<Content: View>: View {
 }
 
 #Preview {
-    NavigationViewContainer {
+    NavigationViewContainer(content: {
         ZStack {
             Color.red.ignoresSafeArea()
         }
-    }
+    },showBackButton: true)
 }

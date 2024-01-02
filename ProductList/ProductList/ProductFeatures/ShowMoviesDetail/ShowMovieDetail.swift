@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct ShowMovieDetail: View {
-    var movie: [MovieDataResult] = []
-    @State var index: Int
+     let movie: MovieDataResult
+    @State var index: Int = 0
     var body: some View {
-        AddCustomNavView {
             VStack(alignment: .leading) {
-                HStack(alignment: .center) {
+              HStack(alignment: .center) {
                     Spacer()
-                    DetailImageView(imageUrl: movie[index].posterPath)
+                  DetailImageView(imageUrl: movie.posterPath)
+                      .scaledToFit()
                         .frame(width: 200, height: 300)
                     Spacer()
-                }
+               }
                 .padding()
-                Text(movie[index].title)
-                    .frame(minHeight: 50)
+                Text("\(movie.title)")
+                    .fixedSize(horizontal: false, vertical: true)
                     .font(.headline)
                     .fontWeight(.bold)
                 Text("2023 - 2h 37m")
@@ -29,22 +29,23 @@ struct ShowMovieDetail: View {
                     .fontWeight(.regular)
                 HStack(spacing: 5) {
                     Image("starIcon")
-                    Text(movie[index].title)
+                    Text("\(movie.voteAverage)")
                         .fontWeight(.regular)
                 }
-                Rectangle()
-                    .frame(width: .infinity, height: 1)
+                Divider()
+                    .background(Color.black)
+                    .padding(.trailing, 20)
                 Text("Description")
                     .font(.headline)
-                Text("The Grinch hatches a scheme to ruin Christmas when the residents of Whoville plan their annual holiday celebration.")
+                Text(movie.overview)
                     .fontWeight(.regular)
-                    .frame(minHeight: 70)
-            }.padding()
+                    .fixedSize(horizontal: false, vertical: true)
+            }.padding(.leading, 20)
             Spacer()
-            }
+        
     }
 }
 
 #Preview {
-    ShowMovieDetail(index: 0)
+    ShowMovieDetail(movie: MovieDataResult.dummy)
 }

@@ -9,23 +9,25 @@ import SwiftUI
 
 struct AddCustomNavView<Content: View>: View {
     let content: Content
-    init(@ViewBuilder content: () ->  Content) {
+    let showBackButton: Bool
+    init(@ViewBuilder content: () ->  Content, showBackButton: Bool) {
         self.content = content()
+        self.showBackButton = showBackButton
     }
     var body: some View {
         NavigationView {
-            NavigationViewContainer {
+            NavigationViewContainer(content:  {
                 content
-            }
+            }, showBackButton: showBackButton)
         }.navigationBarHidden(true)
             .navigationViewStyle(.automatic)
     }
 }
 
 #Preview {
-    AddCustomNavView {
+    AddCustomNavView(content: {
         VStack {
             Color.red.ignoresSafeArea()
         }
-    }
+    }, showBackButton: true)
 }
